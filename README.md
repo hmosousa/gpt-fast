@@ -51,37 +51,37 @@ export MODEL_REPO=meta-llama/Llama-2-7b-chat-hf
 ## Benchmarks
 Benchmarks run on an A100-80GB, power limited to 330W.
 
-| Model    | Technique | Tokens/Second | Memory Bandwidth (GB/s) |
-| -------- | ------- | ------ | ------ |
-| Llama-2-7B  | Base    |  104.9  | 1397.31 |
-|           | 8-bit   | 155.58   | 1069.20 |
-|           | 4-bit (G=32)   | 196.80   | 862.69 |
-| Llama-2-70B | Base    | OOM     ||
-|           | 8-bit   | 19.13    | 1322.58 |
-|           | 4-bit (G=32)   | 25.25    | 1097.66 |
+| Model       | Technique    | Tokens/Second | Memory Bandwidth (GB/s) |
+| ----------- | ------------ | ------------- | ----------------------- |
+| Llama-2-7B  | Base         | 104.9         | 1397.31                 |
+|             | 8-bit        | 155.58        | 1069.20                 |
+|             | 4-bit (G=32) | 196.80        | 862.69                  |
+| Llama-2-70B | Base         | OOM           |                         |
+|             | 8-bit        | 19.13         | 1322.58                 |
+|             | 4-bit (G=32) | 25.25         | 1097.66                 |
 
 ### Speculative Sampling
 [Verifier: Llama-70B (int4), Draft: Llama-7B (int4)](./scripts/speculate_70B_int4.sh): 48.4 tok/s
 
 ### Tensor Parallelism
-| Model    | Number of GPUs | Tokens/Second | Memory Bandwidth (GB/s) |
-| -------- | ------- | ------ | ------ |
-| Llama-2-7B  | 1    |  104.9  | 1397.31 |
-|           | 2   | 136.27   | 954.01 |
-|           | 4   | 168.78   | 635.09 |
-|           | 8   | 179.27   | 395.85 |
-| Llama-2-70B  | 1    |  OOM  |  |
-|           | 2   | 20.53   | 1426.41 |
-|           | 4   | 34.15   | 1204.62 |
-|           | 8   | 47.25   | 858.28 |
+| Model       | Number of GPUs | Tokens/Second | Memory Bandwidth (GB/s) |
+| ----------- | -------------- | ------------- | ----------------------- |
+| Llama-2-7B  | 1              | 104.9         | 1397.31                 |
+|             | 2              | 136.27        | 954.01                  |
+|             | 4              | 168.78        | 635.09                  |
+|             | 8              | 179.27        | 395.85                  |
+| Llama-2-70B | 1              | OOM           |                         |
+|             | 2              | 20.53         | 1426.41                 |
+|             | 4              | 34.15         | 1204.62                 |
+|             | 8              | 47.25         | 858.28                  |
 
 ### AMD
 Benchmarks run on one GCD of a MI-250x.
 
-| Model    | Technique | Tokens/Second | Memory Bandwidth (GB/s) |
-| -------- | ------- | ------ | ------ |
-| Llama-2-7B  | Base    |  76.33  | 1028.70 |
-|           | 8-bit   | 101.86   | 700.06 |
+| Model      | Technique | Tokens/Second | Memory Bandwidth (GB/s) |
+| ---------- | --------- | ------------- | ----------------------- |
+| Llama-2-7B | Base      | 76.33         | 1028.70                 |
+|            | 8-bit     | 101.86        | 700.06                  |
 
 ## Generate Text
 
