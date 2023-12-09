@@ -165,10 +165,10 @@ class QuantHandler:
     def __init__(self, mod):
         self.mod = mod
 
-    def create_quantized_state_dict(self) -> "StateDict":
+    def create_quantized_state_dict(self) -> dict:
         pass
 
-    def convert_for_runtime(self) -> "nn.Module":
+    def convert_for_runtime(self) -> nn.Module:
         pass
 
 
@@ -251,7 +251,7 @@ class GPTQQuantHandler(QuantHandler):
         calibration_limit,
         calibration_seq_length,
         pad_calibration_inputs,
-    ) -> "MultiInput":
+    ) -> list:
         input_recorder = InputRecorder(
             model,
             tokenizer,
@@ -280,7 +280,7 @@ class GPTQQuantHandler(QuantHandler):
         calibration_limit,
         calibration_seq_length,
         pad_calibration_inputs,
-    ) -> "StateDict":
+    ) -> dict:
         inputs = GPTQQuantHandler.get_inputs(
             self.mod,
             tokenizer,
