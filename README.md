@@ -15,14 +15,10 @@ This is *NOT* intended to be a "framework" or "library" - it is intended to show
 For an in-depth walkthrough of what's in this codebase, see this [blog post](https://pytorch.org/blog/accelerating-generative-ai-2/).
 
 ## Installation
-[Download PyTorch nightly](https://pytorch.org/get-started/locally/)
-Install sentencepiece and huggingface_hub
-```bash
-pip install sentencepiece huggingface_hub
 
-git clone https://github.com/EleutherAI/lm-evaluation-harness
-cd lm-evaluation-harness
-git checkout v0.3.0
+Install package in editable mode.
+
+```sh
 pip install -e .
 ```
 
