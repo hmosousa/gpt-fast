@@ -19,6 +19,11 @@ For an in-depth walkthrough of what's in this codebase, see this [blog post](htt
 Install sentencepiece and huggingface_hub
 ```bash
 pip install sentencepiece huggingface_hub
+
+git clone https://github.com/EleutherAI/lm-evaluation-harness
+cd lm-evaluation-harness
+git checkout v0.3.0
+pip install -e .
 ```
 
 To download llama models, go to https://huggingface.co/meta-llama/Llama-2-7b and go through steps to obtain access.

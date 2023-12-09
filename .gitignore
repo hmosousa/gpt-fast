@@ -11,6 +11,8 @@ out
 !data/shakespeare/prepare.py
 wandb
 
+lm-evaluation-harness
+
 # downloaded by our tests
 original_model.py
 original_adapter.py
