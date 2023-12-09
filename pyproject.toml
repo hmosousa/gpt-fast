@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "src"
+version = "0.0.1"
+requires-python = ">=3.11"
+description = "A simple, fast, pure PyTorch Llama inference engine"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["gpt"]
+urls = { GitHub = "https://github.com/pytorch-labs/gpt-fast" }
+dependencies = [
+    "torch==2.2.0.dev20231208", 
+    "sentencepiece==0.1.99", 
+    "lm-eval==0.3.0"
+]
+
+
+[project.scripts]
+run = "src.run:main"
